@@ -19,244 +19,158 @@
     --border: #d8d4cc;
     --max-width: 820px;
   }
-
   * { box-sizing: border-box; }
-
   body {
     font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
-    line-height: 1.65;
-    color: var(--text);
-    background: var(--bg);
-    margin: 0;
-    padding: 0;
+    line-height: 1.65; color: var(--text); background: var(--bg);
+    margin: 0; padding: 0;
   }
-
   header {
-    background: var(--text);
-    color: var(--bg);
-    padding: 2.5rem 1.5rem 2rem;
-    border-bottom: 4px solid var(--accent);
+    background: var(--text); color: var(--bg);
+    padding: 2.5rem 1.5rem 2rem; border-bottom: 4px solid var(--accent);
   }
   header .wrap { max-width: var(--max-width); margin: 0 auto; }
-  header h1 {
-    font-size: 2.2rem;
-    margin: 0 0 0.5rem;
-    line-height: 1.1;
-    letter-spacing: -0.5px;
-  }
-  header p {
-    font-size: 1.05rem;
-    color: #ccc;
-    margin: 0;
-    max-width: 600px;
-  }
+  header h1 { font-size: 2.2rem; margin: 0 0 0.5rem; line-height: 1.1; letter-spacing: -0.5px; }
+  header .tagline { font-size: 1.15rem; color: #e8e8e0; margin: 0 0 1rem; line-height: 1.4; font-style: italic; }
+  header p { font-size: 1rem; color: #ccc; margin: 0; max-width: 600px; }
   header .meta {
-    margin-top: 1rem;
-    font-size: 0.85rem;
-    color: #999;
+    margin-top: 1rem; font-size: 0.85rem; color: #999;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
   }
-
   nav {
-    background: var(--bg-alt);
-    border-bottom: 1px solid var(--border);
-    padding: 0.7rem 1.5rem;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    background: var(--bg-alt); border-bottom: 1px solid var(--border);
+    padding: 0.7rem 1.5rem; position: sticky; top: 0; z-index: 100;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
     font-size: 0.9rem;
   }
-  nav .wrap {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.2rem;
-  }
+  nav .wrap { max-width: var(--max-width); margin: 0 auto; display: flex; flex-wrap: wrap; gap: 1.2rem; }
   nav a {
-    color: var(--text-soft);
-    text-decoration: none;
-    border-bottom: 2px solid transparent;
-    padding-bottom: 2px;
-    transition: all 0.15s;
+    color: var(--text-soft); text-decoration: none;
+    border-bottom: 2px solid transparent; padding-bottom: 2px; transition: all 0.15s;
   }
   nav a:hover { color: var(--accent); border-bottom-color: var(--accent); }
-
-  main {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 2.5rem 1.5rem 4rem;
-  }
-
+  main { max-width: var(--max-width); margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
   section { margin-bottom: 3.5rem; scroll-margin-top: 4rem; }
-
-  h2 {
-    font-size: 1.6rem;
-    margin: 0 0 0.3rem;
-    line-height: 1.2;
-    border-bottom: 2px solid var(--text);
-    padding-bottom: 0.4rem;
-  }
+  h2 { font-size: 1.6rem; margin: 0 0 0.3rem; line-height: 1.2; border-bottom: 2px solid var(--text); padding-bottom: 0.4rem; }
   h2 .emoji { font-size: 1.4rem; margin-right: 0.4rem; }
-
-  h3 {
-    font-size: 1.2rem;
-    margin: 2rem 0 0.5rem;
-    color: var(--accent);
-  }
+  h3 { font-size: 1.2rem; margin: 2rem 0 0.5rem; color: var(--accent); }
   h4 {
-    font-size: 1.02rem;
-    margin: 1.4rem 0 0.4rem;
+    font-size: 1.02rem; margin: 1.4rem 0 0.4rem;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: var(--text-soft);
+    text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-soft);
   }
-
-  .lead {
-    font-size: 1.1rem;
-    color: var(--text-soft);
-    font-style: italic;
-    margin: 0.5rem 0 1.5rem;
-  }
-
+  .lead { font-size: 1.1rem; color: var(--text-soft); font-style: italic; margin: 0.5rem 0 1.5rem; }
   p { margin: 0.6rem 0 1rem; }
-
   a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
   a:hover { color: var(--text); }
-
   ul { padding-left: 1.3rem; }
   li { margin-bottom: 0.6rem; }
-
   blockquote {
     border-left: 3px solid var(--accent-soft);
-    padding: 0.4rem 0 0.4rem 1.2rem;
-    margin: 1rem 0;
-    color: var(--text-soft);
-    font-style: italic;
+    padding: 0.4rem 0 0.4rem 1.2rem; margin: 1rem 0;
+    color: var(--text-soft); font-style: italic;
   }
-
-  /* Mappa */
-  .map-wrap {
-    margin: 1rem 0 2rem;
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    overflow: hidden;
-    background: #fff;
-  }
-  .map-wrap iframe {
-    width: 100%;
-    height: 500px;
-    border: 0;
-    display: block;
-  }
+  .map-wrap { margin: 1rem 0 2rem; border: 1px solid var(--border); border-radius: 4px; overflow: hidden; background: #fff; }
+  .map-wrap iframe { width: 100%; height: 500px; border: 0; display: block; }
   .map-caption {
-    padding: 0.6rem 1rem;
-    background: var(--bg-alt);
-    font-size: 0.85rem;
-    color: var(--text-soft);
-    border-top: 1px solid var(--border);
+    padding: 0.6rem 1rem; background: var(--bg-alt); font-size: 0.85rem;
+    color: var(--text-soft); border-top: 1px solid var(--border);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
   }
-
-  /* Legenda */
   .legend {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin: 1.2rem 0;
-    padding: 1rem;
-    background: var(--bg-alt);
-    border-radius: 4px;
+    display: flex; flex-wrap: wrap; gap: 1rem; margin: 1.2rem 0;
+    padding: 1rem; background: var(--bg-alt); border-radius: 4px;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
     font-size: 0.9rem;
   }
   .legend-item { display: flex; align-items: center; gap: 0.5rem; }
-  .legend-dot {
-    display: inline-block;
-    width: 14px; height: 14px;
-    border-radius: 50%;
-    flex-shrink: 0;
-  }
+  .legend-dot { display: inline-block; width: 14px; height: 14px; border-radius: 50%; flex-shrink: 0; }
   .dot-red { background: var(--accent); }
   .dot-green { background: var(--green); }
   .dot-blue { background: var(--blue); }
   .dot-yellow { background: var(--yellow); }
-
-  /* Box informativi */
   .box {
-    background: #fff;
-    border: 1px solid var(--border);
-    border-left: 4px solid var(--accent);
-    padding: 1rem 1.3rem;
-    margin: 1.5rem 0;
-    border-radius: 0 4px 4px 0;
+    background: #fff; border: 1px solid var(--border); border-left: 4px solid var(--accent);
+    padding: 1rem 1.3rem; margin: 1.5rem 0; border-radius: 0 4px 4px 0;
   }
   .box.green { border-left-color: var(--green); }
   .box.blue { border-left-color: var(--blue); }
+  .box.dark { background: #2a2a2a; color: #e8e8e0; border-left-color: var(--accent-soft); }
+  .box.dark h4 { color: #fff; }
+  .box.dark a { color: var(--accent-soft); }
   .box h4 { margin-top: 0; }
-
-  /* Casi */
   .case {
-    background: #fff;
-    border: 1px solid var(--border);
-    padding: 1.2rem 1.4rem;
-    margin: 1rem 0;
-    border-radius: 4px;
+    background: #fff; border: 1px solid var(--border); padding: 1.2rem 1.4rem;
+    margin: 1rem 0; border-radius: 4px;
   }
   .case h4 {
-    margin-top: 0;
-    color: var(--text);
-    text-transform: none;
-    letter-spacing: 0;
-    font-size: 1.05rem;
-    font-weight: 600;
-    font-family: Georgia, serif;
+    margin-top: 0; color: var(--text); text-transform: none; letter-spacing: 0;
+    font-size: 1.05rem; font-weight: 600; font-family: Georgia, serif;
   }
   .case .tag {
-    display: inline-block;
-    font-size: 0.75rem;
-    padding: 2px 8px;
-    border-radius: 3px;
-    background: var(--bg-alt);
-    color: var(--text-soft);
-    font-family: -apple-system, sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 0.3px;
-    margin-left: 0.5rem;
+    display: inline-block; font-size: 0.75rem; padding: 2px 8px; border-radius: 3px;
+    background: var(--bg-alt); color: var(--text-soft);
+    font-family: -apple-system, sans-serif; text-transform: uppercase;
+    letter-spacing: 0.3px; margin-left: 0.5rem;
   }
   .tag.win { background: #e8f5e8; color: var(--green); }
   .tag.active { background: #fde8e8; color: var(--accent); }
   .tag.legal { background: #e8f0fb; color: var(--blue); }
-  .case .source {
-    font-size: 0.85rem;
-    color: var(--text-soft);
-    margin-top: 0.6rem;
-    font-family: -apple-system, sans-serif;
+  .case .source { font-size: 0.85rem; color: var(--text-soft); margin-top: 0.6rem; font-family: -apple-system, sans-serif; }
+  .practical {
+    background: #fff; border: 1px solid var(--border); border-radius: 4px;
+    margin: 1rem 0; overflow: hidden;
   }
-
-  /* Footer */
+  .practical-header {
+    background: var(--text); color: #fff; padding: 0.8rem 1.4rem;
+    display: flex; justify-content: space-between; align-items: baseline;
+    flex-wrap: wrap; gap: 0.5rem;
+  }
+  .practical-header h4 {
+    margin: 0; color: #fff; text-transform: none; letter-spacing: 0;
+    font-size: 1.1rem; font-family: Georgia, serif;
+  }
+  .practical-header .priority {
+    font-size: 0.75rem; background: var(--accent); color: #fff;
+    padding: 2px 8px; border-radius: 3px;
+    font-family: -apple-system, sans-serif; text-transform: uppercase; letter-spacing: 0.3px;
+  }
+  .practical-body { padding: 1rem 1.4rem; }
+  .practical-body dl { margin: 0; display: grid; grid-template-columns: max-content 1fr; gap: 0.4rem 1rem; }
+  .practical-body dt {
+    font-family: -apple-system, sans-serif; font-size: 0.85rem;
+    text-transform: uppercase; letter-spacing: 0.3px;
+    color: var(--text-soft); font-weight: 600;
+  }
+  .practical-body dd { margin: 0; font-size: 0.95rem; }
+  .numbers-table {
+    width: 100%; border-collapse: collapse; margin: 1rem 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    font-size: 0.95rem;
+  }
+  .numbers-table th, .numbers-table td { text-align: left; padding: 0.6rem 0.8rem; border-bottom: 1px solid rgba(255,255,255,0.15); }
+  .numbers-table th {
+    background: rgba(255,255,255,0.08); font-weight: 600; font-size: 0.85rem;
+    text-transform: uppercase; letter-spacing: 0.3px; color: #ccc;
+  }
+  .numbers-table .number { font-weight: 700; color: var(--accent-soft); white-space: nowrap; }
   footer {
-    background: var(--text);
-    color: #aaa;
-    padding: 2.5rem 1.5rem;
+    background: var(--text); color: #aaa; padding: 2.5rem 1.5rem;
     font-size: 0.9rem;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
   }
-  footer .wrap {
-    max-width: var(--max-width);
-    margin: 0 auto;
-  }
+  footer .wrap { max-width: var(--max-width); margin: 0 auto; }
   footer a { color: var(--accent-soft); }
   footer a:hover { color: #fff; }
   footer p { margin: 0.5rem 0; }
-
   @media (max-width: 600px) {
     header h1 { font-size: 1.7rem; }
+    header .tagline { font-size: 1rem; }
     .map-wrap iframe { height: 400px; }
     h2 { font-size: 1.35rem; }
     nav .wrap { gap: 0.8rem; font-size: 0.8rem; }
+    .practical-body dl { grid-template-columns: 1fr; gap: 0.2rem; }
+    .practical-body dt { margin-top: 0.4rem; }
   }
 </style>
 </head>
@@ -265,7 +179,8 @@
 <header>
   <div class="wrap">
     <h1>Resistenze AI</h1>
-    <p>Mappa dei conflitti, vertenze e mobilitazioni contro l'espansione delle infrastrutture e dei modelli di intelligenza artificiale: data center, lavoro cognitivo, ghost workers, copyright, sorveglianza.</p>
+    <p class="tagline">Big Tech licenzia lavoratori cognitivi e costruisce data center sulle nostre teste con la nostra acqua e la nostra elettricità. Questa è una mappa di chi sta resistendo, e di dove possiamo trovarci.</p>
+    <p>Conflitti, vertenze e mobilitazioni contro l'espansione delle infrastrutture e dei modelli di intelligenza artificiale: data center, lavoro cognitivo, ghost workers, copyright, sorveglianza.</p>
     <div class="meta">Prototipo · Ultimo aggiornamento: maggio 2026</div>
   </div>
 </header>
@@ -273,11 +188,12 @@
 <nav>
   <div class="wrap">
     <a href="#mappa">Mappa</a>
+    <a href="#milano">Milano</a>
+    <a href="#sindacalismo">Sindacalismo</a>
     <a href="#data-center">Data center</a>
     <a href="#europa">Europa</a>
     <a href="#cause-legali">Cause legali</a>
     <a href="#ghost-workers">Ghost workers</a>
-    <a href="#sindacalismo">Sindacalismo tech</a>
     <a href="#literacy">AI literacy</a>
     <a href="#letture">Letture</a>
   </div>
@@ -285,7 +201,6 @@
 
 <main>
 
-<!-- ==================== MAPPA ==================== -->
 <section id="mappa">
   <h2><span class="emoji">🗺️</span>Mappa interattiva</h2>
   <p class="lead">Conflitti attivi, vittorie, vertenze e cause legali. Aggiornata progressivamente.</p>
@@ -310,9 +225,221 @@
   </div>
 </section>
 
-<!-- ==================== DATA CENTER ITALIA ==================== -->
+<section id="milano">
+  <h2><span class="emoji">📍</span>Milano: i nodi del cloud, raggiungibili in metro</h2>
+  <p class="lead">Una selezione operativa dei principali data center milanesi, con indicazioni su come arrivarci. Pensata per chi vuole organizzare presidi, volantinaggi, sopralluoghi.</p>
+
+  <div class="box dark">
+    <h4>Premessa: chi possiede cosa</h4>
+    <p>Una distinzione che si tende a sfumare: <strong>i grandi data center milanesi non sono di proprietà di AWS, Microsoft o Google</strong>. Sono di operatori di colocation (Retelit/CDLAN, Vantage, STACK, Equinix, ecc.) che <em>affittano spazio</em> agli hyperscaler. Quando colpisci un data center colpisci <strong>tutti i suoi tenant insieme</strong> — il che lo rende un bersaglio molto più strategico.</p>
+    <p>Il caso esemplare è <strong>Caldera</strong>: ufficialmente è Avalon Campus (Retelit), ma dentro ci sono i gateway diretti di Microsoft Azure e Google Cloud, e AWS arriva via MIX (Milan Internet Exchange).</p>
+  </div>
+
+  <div class="practical">
+    <div class="practical-header">
+      <h4>1. Caldera — Avalon Campus (Retelit/CDLAN)</h4>
+      <span class="priority">Priorità massima</span>
+    </div>
+    <div class="practical-body">
+      <dl>
+        <dt>Indirizzo</dt><dd>Via Caldera 21, Milano</dd>
+        <dt>Come arrivare</dt><dd><strong>M1 Bisceglie</strong> + tram 14 (fermate Caldera) o ~15 min a piedi verso ovest</dd>
+        <dt>Operatore</dt><dd>Retelit / CDLAN</dd>
+        <dt>Tenant principali</dt><dd>Microsoft Azure, Google Cloud (gateway diretti); AWS via MIX; <strong>165+ operatori e ISP</strong></dd>
+        <dt>Cosa è</dt><dd>Il <strong>più grande interconnection hub italiano</strong>. Qui passa la maggior parte del traffico internet del paese. Avalon 1 è il cuore, Avalon 2 è a Settimo Milanese, Avalon 3 è in via Bisceglie.</dd>
+        <dt>Perché conta</dt><dd>Bersaglio simbolico assoluto. Tutto l'internet italiano passa di qui. Visibilità garantita, presidio ad alto impatto comunicativo.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="practical">
+    <div class="practical-header">
+      <h4>2. Avalon 3 — via Bisceglie</h4>
+    </div>
+    <div class="practical-body">
+      <dl>
+        <dt>Indirizzo</dt><dd>Via Bisceglie, Milano (zona ovest)</dd>
+        <dt>Come arrivare</dt><dd><strong>M1 Bisceglie</strong> — capolinea, raggiungibile a piedi</dd>
+        <dt>Operatore</dt><dd>Retelit (Gruppo Avalon Campus)</dd>
+        <dt>Capacità</dt><dd>13.000 m² complessivi con Avalon 1 e 2, oltre 2.600 rack</dd>
+        <dt>Note</dt><dd>Certificato Tier IV, edificio FRAME LEED Gold. Connesso in fibra a Caldera (4 km).</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="practical">
+    <div class="practical-header">
+      <h4>3. Vantage MXP2 — Castelletto, Settimo Milanese</h4>
+      <span class="priority">Appena attivato</span>
+    </div>
+    <div class="practical-body">
+      <dl>
+        <dt>Indirizzo</dt><dd>Castelletto, Settimo Milanese (~15 km ovest del centro Milano)</dd>
+        <dt>Come arrivare</dt><dd>Da <strong>M1 Bisceglie</strong> bus ATM verso Settimo, oppure tangenziale Ovest. <strong>Adiacente ad Avalon 2</strong>.</dd>
+        <dt>Operatore</dt><dd>Vantage Data Centers (USA, hyperscaler globale)</dd>
+        <dt>Capacità</dt><dd>32 MW di carico IT critico su 10.000 m², 2 edifici a 3 piani</dd>
+        <dt>Investimento</dt><dd><strong>350 milioni €</strong> (solo MXP2). Insieme a MXP1 (Melegnano), <strong>4 miliardi € totali in 8 anni</strong></dd>
+        <dt>Posti di lavoro</dt><dd>4.000 in fase costruttiva, <strong>solo 250 permanenti</strong></dd>
+        <dt>Status politico</dt><dd>Dichiarato dal Governo italiano (CdM 2 ottobre 2025) <em>"infrastruttura di rilevanza strategica nazionale"</em> ai sensi dell'art. 13 DL 104/2023</dd>
+        <dt>Operativo</dt><dd>Prima fase: <strong>primavera 2026</strong> — adesso</dd>
+        <dt>Cliente dichiarato</dt><dd><em>"Leading AI and cloud providers"</em> — quindi AWS, Azure, Google in colocation</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="practical">
+    <div class="practical-header">
+      <h4>4. Vantage MXP1 — Melegnano</h4>
+    </div>
+    <div class="practical-body">
+      <dl>
+        <dt>Indirizzo</dt><dd>Melegnano (sud-est Milano, ~17 km dal centro)</dd>
+        <dt>Come arrivare</dt><dd><strong>Treno regionale Milano–Lodi</strong>, stazione Melegnano</dd>
+        <dt>Operatore</dt><dd>Vantage Data Centers</dd>
+        <dt>Capacità</dt><dd>64 MW IT su 30 acri, 4 edifici, attivo dal 2022</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="practical">
+    <div class="practical-header">
+      <h4>5. Microsoft Settala</h4>
+    </div>
+    <div class="practical-body">
+      <dl>
+        <dt>Indirizzo</dt><dd>Settala (est Milano, area Linate-Melzo)</dd>
+        <dt>Come arrivare</dt><dd>Treno regionale verso Treviglio, stazione Pioltello-Limito + bus, oppure auto via SP103</dd>
+        <dt>Operatore</dt><dd>Microsoft Azure (regione Italy North)</dd>
+        <dt>Note</dt><dd>Microsoft sta espandendo in Italia anche con Bornasco (PV). Per Settala dati operativi non pubblici.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="practical">
+    <div class="practical-header">
+      <h4>6. Bornasco (PV) — Microsoft</h4>
+      <span class="priority">Mobilitazione attiva</span>
+    </div>
+    <div class="practical-body">
+      <dl>
+        <dt>Indirizzo</dt><dd>Bornasco, Pavia</dd>
+        <dt>Come arrivare</dt><dd>Treno regionale Milano–Pavia + auto/bus locale</dd>
+        <dt>Operatore</dt><dd>Microsoft</dd>
+        <dt>Capacità</dt><dd>Oltre 50 MW di generatori d'emergenza, 165.000 m² di terreno agricolo</dd>
+        <dt>Comitato attivo</dt><dd><strong>Sentinelle del Territorio</strong> (ex "No Logistica a Bornasco")</dd>
+        <dt>Punto critico</dt><dd>Frazionato sotto i 50 MW per eludere la VIA (Valutazione Impatto Ambientale)</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="box">
+    <h4>📌 Settimo Milanese: il nodo nascosto</h4>
+    <p>Settimo Milanese (15 km ovest, comune di 20.000 abitanti) è diventato <strong>il vero centro nevralgico del cloud italiano</strong>, e i suoi abitanti probabilmente non lo sanno. Nel raggio di pochi chilometri ci sono:</p>
+    <ul>
+      <li><strong>Avalon 2</strong> (Retelit, espansione di Caldera)</li>
+      <li><strong>Vantage MXP2</strong> (Castelletto, appena attivato)</li>
+      <li><strong>Equinix ML5</strong> (Castelletto)</li>
+      <li><strong>BT Italia</strong> (via Darwin, Settimo Milanese)</li>
+    </ul>
+    <p>È un'opportunità di organizing locale poco esplorata: un comune di provincia con una concentrazione di infrastrutture digitali tra le più alte d'Europa.</p>
+  </div>
+
+  <p style="font-size:0.9rem; color: var(--text-soft); font-style: italic; margin-top: 1.5rem;">
+    Nota: STACK MIL09, nonostante il nome, è a <strong>Siziano (PV)</strong>, non a Milano. Non è raggiungibile in metropolitana. Si arriva in auto o treno verso Pavia.
+  </p>
+</section>
+
+<section id="sindacalismo">
+  <h2><span class="emoji">✊</span>Sindacalismo tech: la leva centrale</h2>
+  <p class="lead">Le mobilitazioni territoriali contro i data center sono una metà del fronte. L'altra metà è il lavoro cognitivo che viene sostituito a velocità inedita. Senza un fronte sindacale, la rabbia non diventa potere.</p>
+
+  <div class="box dark">
+    <h4>📊 AWS e i licenziamenti AI: i numeri</h4>
+    <p>Mentre Vantage costruisce a Castelletto per ospitare AWS e Azure, Amazon ha appena chiuso il più grande taglio della sua storia trentennale.</p>
+    <table class="numbers-table">
+      <tr>
+        <th>Cosa</th>
+        <th>Numero</th>
+        <th>Quando</th>
+      </tr>
+      <tr>
+        <td>Licenziamenti corporate Amazon (totale)</td>
+        <td class="number">~30.000</td>
+        <td>ott 2025 – gen 2026</td>
+      </tr>
+      <tr>
+        <td>Prima ondata</td>
+        <td class="number">14.000</td>
+        <td>ottobre 2025</td>
+      </tr>
+      <tr>
+        <td>Seconda ondata ("Project Dawn")</td>
+        <td class="number">16.000</td>
+        <td>gennaio 2026</td>
+      </tr>
+      <tr>
+        <td>Possibile terza ondata</td>
+        <td class="number">fino a 14.000</td>
+        <td>maggio 2026</td>
+      </tr>
+      <tr>
+        <td>Crescita AWS nello stesso trimestre</td>
+        <td class="number">+24%</td>
+        <td>Q1 2026 (+13 trimestri)</td>
+      </tr>
+      <tr>
+        <td>CapEx Big Tech 2026</td>
+        <td class="number">725 mld $</td>
+        <td>+77% sul 2025</td>
+      </tr>
+      <tr>
+        <td>Licenziamenti tech USA AI-driven 2025</td>
+        <td class="number">~55.000</td>
+        <td>fonte: Challenger Gray &amp; Christmas</td>
+      </tr>
+    </table>
+
+    <p style="margin-top: 1.2rem;"><strong>AWS specificamente</strong> ha tagliato team AI, analytics, training e marketing già da luglio 2025 (fonte: Reuters). Beth Galetti (SVP Amazon) ha giustificato i tagli con queste parole:</p>
+    <blockquote style="color: #ddd; border-left-color: var(--accent-soft);">
+      «Questa generazione di AI è la tecnologia più trasformativa che abbiamo visto dai tempi di Internet… abbiamo bisogno di essere organizzati in modo più snello, con meno livelli, per muoverci più velocemente.»
+    </blockquote>
+    <p>Salesforce ha tagliato 4.000 customer service worker, sostituiti da AI. Marc Benioff (CEO):</p>
+    <blockquote style="color: #ddd; border-left-color: var(--accent-soft);">
+      «Ho ridotto da 9.000 a 5.000 teste, perché mi servono meno teste.»
+    </blockquote>
+    <p style="font-size: 0.9rem; margin-top: 1rem;">Fonti: <a href="https://www.cnbc.com/2025/12/21/ai-job-cuts-amazon-microsoft-and-more-cite-ai-for-2025-layoffs.html" target="_blank" rel="noopener">CNBC</a>, <a href="https://invezz.com/news/2026/05/04/is-big-techs-725b-ai-splurge-being-funded-by-mass-layoffs/" target="_blank" rel="noopener">Invezz</a>, <a href="https://www.cxtoday.com/contact-center/amazon-layoffs-customer-service-impact/" target="_blank" rel="noopener">CX Today</a>.</p>
+  </div>
+
+  <h3>Iniziative dei lavoratori contro Big Tech militare</h3>
+  <ul>
+    <li><a href="https://www.notechforapartheid.com/" target="_blank" rel="noopener">No Tech For Apartheid (NOTA)</a> — Campagna principale guidata da lavoratori di Google e Amazon contro il contratto Project Nimbus (1,22 mld $) con il governo israeliano. Sit-in negli uffici di Google a Sunnyvale e New York (aprile 2024), decine di licenziamenti di rappresaglia.</li>
+    <li><a href="https://noazureforapartheid.com/" target="_blank" rel="noopener">No Azure for Apartheid</a> — Campagna gemella dei lavoratori Microsoft. Microsoft ha dovuto revocare l'accesso ad Azure all'unità di intelligence militare 8200 dopo pressioni interne e inchieste giornalistiche.</li>
+    <li><a href="https://en.wikipedia.org/wiki/No_Tech_for_Apartheid" target="_blank" rel="noopener">NOTA — Voce Wikipedia</a> con cronologia completa</li>
+    <li><a href="https://bdsmovement.net/no-tech-apartheid" target="_blank" rel="noopener">NOTA su BDS Movement</a></li>
+    <li><a href="https://medium.com/@notechforapartheid" target="_blank" rel="noopener">NOTA su Medium</a> — Comunicati e testimonianze</li>
+  </ul>
+
+  <h3>Sindacati e coalizioni internazionali</h3>
+  <ul>
+    <li><a href="https://techworkerscoalition.org/" target="_blank" rel="noopener">Tech Workers Coalition (TWC)</a> — Coalizione internazionale di lavoratori tech, organizer e attivisti.</li>
+    <li><a href="https://www.alphabetworkersunion.org/" target="_blank" rel="noopener">Alphabet Workers Union (AWU-CWA)</a> — Sindacato wall-to-wall di Google/Alphabet, affiliato a CWA. Include FTE, temp, vendor e contractor, con focus su etica dell'IA e contratti militari.</li>
+    <li><a href="https://code-cwa.org/" target="_blank" rel="noopener">CODE-CWA</a> — Campaign to Organize Digital Employees: tech, videogiochi, digitale in USA e Canada.</li>
+    <li><a href="https://workerorganizing.org/" target="_blank" rel="noopener">Emergency Workplace Organizing Committee (EWOC)</a> — Iniziativa congiunta DSA + UE.</li>
+  </ul>
+
+  <h3>In Italia</h3>
+  <p>Il fronte italiano è ancora frammentato. Le categorie sindacali più esposte sono quelle dei lavoratori della comunicazione e creativi:</p>
+  <ul>
+    <li><strong>SLC-CGIL</strong> — Sindacato dei lavoratori della comunicazione, ha aperto la contrattazione su IA in azienda nei contratti TLC e media.</li>
+    <li><strong>FNSI</strong> (Federazione Nazionale Stampa Italiana) — Su IA generativa e redazioni.</li>
+    <li><strong>STradE</strong> e <strong>AITI</strong> — Sindacati dei traduttori, in prima linea contro la sostituzione AI.</li>
+    <li><strong>Nidil-CGIL</strong> — Per i collaboratori atipici e i freelance.</li>
+  </ul>
+  <p style="font-size: 0.9rem; color: var(--text-soft); font-style: italic;">Sezione in costruzione. Se hai informazioni su vertenze italiane attive su introduzione di IA in azienda, segnalacele.</p>
+</section>
+
 <section id="data-center">
-  <h2><span class="emoji">🏭</span>Resistenza ai data center in Italia</h2>
+  <h2><span class="emoji">🏭</span>Data center in Italia</h2>
   <p class="lead">La Lombardia concentra oltre il 60% delle richieste nazionali di nuovi data center. È lì che si stanno aprendo i primi conflitti veri.</p>
 
   <h3>Casi caldi</h3>
@@ -326,7 +453,7 @@
 
   <div class="case">
     <h4>Bornasco (PV) — Microsoft <span class="tag active">Contestazione attiva</span></h4>
-    <p>Progetto Microsoft su 165.000 m² di terreno agricolo. Gli sviluppatori hanno frazionato i progetti o dichiarato potenze inferiori ai 50 MW per eludere l'obbligo di Valutazione di Impatto Ambientale (VIA). Il comitato cittadino <strong>"Sentinelle del Territorio"</strong> (ex "No Logistica a Bornasco") monitora il progetto.</p>
+    <p>Progetto Microsoft su 165.000 m² di terreno agricolo. Gli sviluppatori hanno frazionato i progetti o dichiarato potenze inferiori ai 50 MW per eludere l'obbligo di Valutazione di Impatto Ambientale. Il comitato cittadino <strong>"Sentinelle del Territorio"</strong> monitora il progetto.</p>
     <div class="source">Fonte: IrpiMedia · Privacy Network</div>
   </div>
 
@@ -347,39 +474,39 @@
     <li><strong>Linee guida Regione Lombardia</strong> (giugno 2024) — Non vincolanti, definiscono cinque tipologie di data center.</li>
     <li><strong>Linee guida Ministero dell'Ambiente</strong> (agosto 2024) — Spingono verso rinnovabili e recupero di aree dismesse.</li>
     <li><strong>Proposta di legge quadro nazionale</strong> — In esame alla IX Commissione Camera dal marzo 2025.</li>
-    <li><strong>Legge regionale Lombardia</strong> — Approvata dalla giunta lombarda il 17 novembre 2025: individua le aree dismesse come prioritarie ma consente di occupare terreno agricolo se si paga di più per il contributo di costruzione. Il movimento la chiama <em>"monetizzazione del consumo di suolo"</em>.</li>
+    <li><strong>Legge regionale Lombardia</strong> — Approvata il 17 novembre 2025: aree dismesse prioritarie ma consente di occupare terreno agricolo se si paga di più. Il movimento la chiama <em>"monetizzazione del consumo di suolo"</em>.</li>
+    <li><strong>Decreto-legge 104/2023, art. 13</strong> — Strumento usato dal Governo per dichiarare alcuni progetti (es. Vantage) "infrastrutture di rilevanza strategica nazionale" e accelerare le autorizzazioni.</li>
   </ul>
 
   <div class="box">
     <h4>Risorse italiane utili</h4>
     <ul>
-      <li><a href="https://www.legambientelombardia.it/data-center-bollate-tutte-le-parti-hanno-firmato-ritirato-il-ricorso/" target="_blank" rel="noopener">Legambiente Lombardia</a> — La voce ambientalista più strutturata sul tema.</li>
+      <li><a href="https://lombardia.legambiente.it/" target="_blank" rel="noopener">Legambiente Lombardia</a></li>
       <li><a href="https://irpimedia.irpi.eu/data-center-consumo-di-suolo/" target="_blank" rel="noopener">IrpiMedia — "I data center si mangiano la terra"</a></li>
-      <li><a href="https://www.internazionale.it/notizie/francesca-coin/2025/12/15/data-center-italia-proteste" target="_blank" rel="noopener">Internazionale — Francesca Coin sui data center</a></li>
-      <li><a href="https://privacy-network.it/" target="_blank" rel="noopener">Privacy Network</a> — Analisi tecnico-politiche</li>
+      <li><a href="https://www.internazionale.it/notizie/francesca-coin/2025/12/15/data-center-italia-proteste" target="_blank" rel="noopener">Internazionale — Francesca Coin</a></li>
+      <li><a href="https://privacy-network.it/" target="_blank" rel="noopener">Privacy Network</a></li>
       <li><a href="https://www.edoardolimone.com/2025/04/28/il-movimento-no-data-center/" target="_blank" rel="noopener">Edoardo Limone — "Il movimento no data center"</a></li>
     </ul>
   </div>
 </section>
 
-<!-- ==================== EUROPA ==================== -->
 <section id="europa">
   <h2><span class="emoji">🇪🇺</span>Europa: il panorama</h2>
 
   <div class="case">
     <h4>🇮🇪 Irlanda — il caso limite</h4>
-    <p>Nel 2024 i data center hanno consumato il <strong>22% dell'energia elettrica totale</strong> dell'Irlanda — più di tutte le abitazioni urbane irlandesi messe insieme. Le previsioni statali indicano <strong>il 31% entro il 2034</strong>. EirGrid (gestore della rete) aveva chiesto una moratoria già nel 2021.</p>
+    <p>Nel 2024 i data center hanno consumato il <strong>22% dell'energia elettrica totale</strong> dell'Irlanda — più di tutte le abitazioni urbane irlandesi. Le previsioni statali indicano <strong>il 31% entro il 2034</strong>. EirGrid (gestore della rete) aveva chiesto una moratoria già nel 2021.</p>
     <div class="source"><a href="https://valori.it/data-center-irlanda/" target="_blank" rel="noopener">Valori.it — Inchiesta Irlanda</a></div>
   </div>
 
   <div class="case">
     <h4>🇪🇸 Spagna — Saragozza/Aragona</h4>
-    <p>A settembre 2025 c'è stata la prima grande manifestazione a Saragozza contro il consumo idrico degli impianti — è il perno della battaglia contro i data center in Spagna. La regione dell'Aragona è diventata l'hub spagnolo per Amazon, Microsoft e Meta proprio mentre soffre di siccità cronica.</p>
+    <p>A settembre 2025 c'è stata la prima grande manifestazione a Saragozza contro il consumo idrico degli impianti — perno della battaglia contro i data center in Spagna. La regione dell'Aragona è hub di Amazon, Microsoft e Meta in piena siccità cronica.</p>
   </div>
 
   <div class="case">
     <h4>🇳🇱 Paesi Bassi — Middenmeer e Zeewolde</h4>
-    <p>Nei Paesi Bassi le proteste hanno portato all'<strong>occupazione del tetto del data center di Microsoft a Middenmeer</strong>; i manifestanti hanno contestato anche l'utilizzo a scopi militari delle intelligenze artificiali. Meta aveva proposto data center a Zeewolde con grande opposizione locale per l'impatto sulle riserve di acqua di falda: il progetto è stato bloccato dal parlamento olandese.</p>
+    <p>Nei Paesi Bassi le proteste hanno portato all'<strong>occupazione del tetto del data center Microsoft a Middenmeer</strong>; i manifestanti hanno contestato anche l'utilizzo a scopi militari delle AI ospitate. Meta aveva proposto data center a Zeewolde con grande opposizione locale per le riserve di acqua di falda: il progetto è stato bloccato dal parlamento olandese.</p>
   </div>
 
   <div class="case">
@@ -389,21 +516,20 @@
 
   <div class="case">
     <h4>🇨🇱 🇺🇾 America Latina — l'acqua come campo di battaglia</h4>
-    <p><strong>Cile:</strong> <a href="https://restofworld.org/2024/data-centers-environmental-issues/" target="_blank" rel="noopener">MOSACAT</a> (Movimento Socioambiental Comunitario por el Agua y el Territorio) ha bloccato e fortemente ridimensionato i piani di Google, Microsoft e Amazon a Santiago.<br>
-    <strong>Uruguay:</strong> la decisione del governo di autorizzare i data center Google in piena siccità peggiore in 74 anni ha generato proteste di massa.</p>
+    <p><strong>Cile:</strong> <a href="https://restofworld.org/2024/data-centers-environmental-issues/" target="_blank" rel="noopener">MOSACAT</a> ha bloccato e ridimensionato i piani di Google, Microsoft e Amazon a Santiago.<br>
+    <strong>Uruguay:</strong> la decisione del governo di autorizzare data center Google in piena siccità peggiore in 74 anni ha generato proteste di massa.</p>
   </div>
 
   <div class="box">
     <h4>Coordinamento e mappe</h4>
     <ul>
-      <li><a href="https://www.datacenterwatch.org/report" target="_blank" rel="noopener">Data Center Watch</a> — Mappa dettagliata di progetti bloccati o ritardati negli USA.</li>
+      <li><a href="https://www.datacenterwatch.org/report" target="_blank" rel="noopener">Data Center Watch</a> — Mappa di progetti USA bloccati o ritardati.</li>
       <li><a href="https://www.fractracker.org/" target="_blank" rel="noopener">FracTracker Alliance — Data Center Map</a></li>
     </ul>
     <p style="margin-top:0.8rem"><strong>Sondaggio europeo (ottobre 2025):</strong> più del 70% degli intervistati ritiene che la costruzione di nuovi impianti debba essere subordinata a nuove fonti rinnovabili; oltre il 60% pensa che non dovrebbero essere costruiti se alimentati a fossili.</p>
   </div>
 </section>
 
-<!-- ==================== CAUSE LEGALI ==================== -->
 <section id="cause-legali">
   <h2><span class="emoji">⚖️</span>Cause legali sul copyright</h2>
   <p class="lead">A ottobre 2025 sono almeno <strong>51 cause attive</strong> contro aziende di IA per violazione di copyright nei soli USA. Tre giudici hanno deciso sul fair use: due a favore delle aziende, uno contro.</p>
@@ -411,18 +537,18 @@
   <div class="case">
     <h4>🗞️ NYT v. OpenAI / Microsoft <span class="tag legal">Discovery in corso</span></h4>
     <p>Causa simbolo del fronte copyright (dicembre 2023, Southern District of New York). Il <em>New York Times</em> sostiene che OpenAI ha usato illegalmente i contenuti del Times per addestrare ChatGPT. È <strong>il</strong> caso che potrebbe definire i confini del fair use per l'IA.</p>
-    <p><strong>Stato:</strong> discovery in corso, nessuna decisione di merito attesa prima dell'estate 2026. Se i querelanti vincono, possibile ordine di distruzione del dataset.</p>
+    <p><strong>Stato:</strong> discovery in corso, decisione di merito attesa non prima dell'estate 2026. Se i querelanti vincono, possibile ordine di distruzione del dataset.</p>
   </div>
 
   <div class="case">
     <h4>📖 Authors Guild + 17 autori v. OpenAI <span class="tag legal">In corso</span></h4>
-    <p>Settembre 2023. Tra i firmatari: <strong>David Baldacci, Michael Connelly, Jonathan Franzen, John Grisham, George R.R. Martin, Jodi Picoult, George Saunders, Scott Turow</strong>. Causa di classe per violazione di copyright sulle opere di narrativa usate per addestrare GPT.</p>
+    <p>Settembre 2023. Tra i firmatari: <strong>David Baldacci, Michael Connelly, Jonathan Franzen, John Grisham, George R.R. Martin, Jodi Picoult, George Saunders, Scott Turow</strong>. Causa di classe sulle opere di narrativa usate per addestrare GPT.</p>
     <p>Il punto centrale: i libri sarebbero stati scaricati da repository pirata (es. Books3, LibGen) e copiati nel training set.</p>
   </div>
 
   <div class="case">
     <h4>🖼️ Getty Images v. Stability AI <span class="tag legal">In corso</span></h4>
-    <p>Febbraio 2023. Getty accusa Stability AI di aver violato più di <strong>12 milioni di fotografie</strong>, le loro didascalie e i metadati per costruire Stable Diffusion e DreamStudio. C'è anche un'accusa di violazione di marchio: il modello riproduce il watermark di Getty.</p>
+    <p>Febbraio 2023. Getty accusa Stability AI di aver violato più di <strong>12 milioni di fotografie</strong>, le loro didascalie e i metadati per costruire Stable Diffusion e DreamStudio.</p>
   </div>
 
   <div class="case">
@@ -432,20 +558,19 @@
 
   <div class="case">
     <h4>🎬 Disney, Universal, Warner Bros. v. Midjourney</h4>
-    <p>2024-2025. I tre grandi studios contestano la riproducibilità dei loro personaggi protetti via prompt.</p>
+    <p>2024-2025. I tre studios contestano la riproducibilità dei loro personaggi protetti via prompt.</p>
   </div>
 
   <div class="box blue">
     <h4>Risorse per seguire i casi</h4>
     <ul>
       <li><a href="https://chatgptiseatingtheworld.com/" target="_blank" rel="noopener">ChatGPT Is Eating the World</a> — Status di tutte le cause, aggiornato settimanalmente.</li>
-      <li><a href="https://www.mckoolsmith.com/newsroom-ailitigation" target="_blank" rel="noopener">McKool Smith — AI Litigation Newsroom</a> — Update legali dettagliati caso per caso.</li>
+      <li><a href="https://www.mckoolsmith.com/newsroom-ailitigation" target="_blank" rel="noopener">McKool Smith — AI Litigation Newsroom</a></li>
       <li><a href="https://authorsguild.org/news/ag-and-authors-file-class-action-suit-against-openai/" target="_blank" rel="noopener">Authors Guild — Pagina causa</a></li>
     </ul>
   </div>
 </section>
 
-<!-- ==================== GHOST WORKERS ==================== -->
 <section id="ghost-workers">
   <h2><span class="emoji">👻</span>Ghost workers: i lavoratori invisibili dell'IA</h2>
   <p class="lead">Il lavoro nascosto dietro ogni LLM e ogni sistema di moderazione: persone che etichettano dati ed eliminano contenuti tossici, spesso pagate <strong>1-2 dollari l'ora</strong> in Kenya, Filippine, Venezuela, Colombia.</p>
@@ -456,8 +581,8 @@
   <ul>
     <li>L'<strong>African Content Moderators Union</strong> è stato formato da 150 lavoratori AI africani — un atto di sfida storica contro le big tech. Uno degli organizer (Richard Mathenge) è entrato nelle 100 persone più influenti nell'IA secondo <em>TIME</em>.</li>
     <li>L'Alta Corte keniota nel <strong>giugno 2023</strong> ha ordinato a Meta di fornire "cure mediche, psichiatriche e psicologiche adeguate".</li>
-    <li>La Corte d'Appello ha sancito che le cause possono procedere a giudizio in Kenya, respingendo le obiezioni di Meta sulla giurisdizione.</li>
-    <li><strong>OpenAI</strong> — TIME ha rivelato nel 2023 che OpenAI ha pagato microworker in Kenya tra 1,32 $ e 2 $ all'ora per esaminare contenuti tossici e addestrare i filtri di moderazione di ChatGPT.</li>
+    <li>La Corte d'Appello ha sancito che le cause possono procedere a giudizio in Kenya, respingendo le obiezioni di Meta.</li>
+    <li><strong>OpenAI</strong> — TIME ha rivelato nel 2023 che OpenAI ha pagato microworker in Kenya tra 1,32 $ e 2 $ all'ora per esaminare contenuti tossici.</li>
   </ul>
 
   <div class="case">
@@ -467,72 +592,49 @@
   </div>
 
   <h3>📋 Lettera aperta dei data labeler kenyoti a Biden (maggio 2024)</h3>
-  <p>Quasi 100 data labeler kenyoti hanno scritto a Joe Biden descrivendo le loro condizioni come <strong>"schiavitù moderna"</strong>. Otto+ ore al giorno a esaminare contenuti grafici (omicidi, suicidi, abusi su minori, violenza estrema). Per meno di 2 $ all'ora.</p>
+  <p>Quasi 100 data labeler kenyoti hanno scritto a Joe Biden descrivendo le loro condizioni come <strong>"schiavitù moderna"</strong>. Otto+ ore al giorno a esaminare contenuti grafici per meno di 2 $ all'ora.</p>
 
   <h3>🇨🇴 Colombia — Teleperformance / TikTok</h3>
-  <p>In Colombia, la piattaforma di outsourcing Teleperformance ha firmato un accordo storico per consentire ai suoi <strong>40.000 lavoratori</strong> il diritto di formare un sindacato, dopo un'inchiesta che ha esposto le condizioni dei moderatori di TikTok.</p>
+  <p>Teleperformance ha firmato un accordo storico per consentire ai suoi <strong>40.000 lavoratori</strong> il diritto di formare un sindacato, dopo un'inchiesta sulle condizioni dei moderatori di TikTok.</p>
 
   <h3>🇰🇪 Data Labelers Association</h3>
-  <p>I lavoratori kenyoti hanno formato la <strong>Data Labelers Association</strong> per difendere trattamento equo e condizioni migliori — un'azione collettiva che segnala una resistenza necessaria alla catena di fornitura globale predatoria dell'IA.</p>
+  <p>I lavoratori kenyoti hanno formato la <strong>Data Labelers Association</strong> per difendere trattamento equo e condizioni migliori.</p>
 
   <div class="box">
     <h4>Risorse per seguire e supportare</h4>
     <ul>
-      <li><a href="https://www.foxglove.org.uk/" target="_blank" rel="noopener">Foxglove</a> — ONG britannica che fa cause legali a fianco dei moderatori africani contro Meta, TikTok e altri. Punto di riferimento principale.</li>
-      <li><a href="https://data-workers.org/" target="_blank" rel="noopener">Data Workers' Inquiry</a> — Progetto di ricerca-azione con i ghost worker globali (Kenya, Colombia, Venezuela, Siria).</li>
-      <li><a href="https://www.mercymutemi.com/" target="_blank" rel="noopener">Mercy Mutemi</a> — Mercy Mutemi (avvocata) — L'avvocata che porta avanti le cause kenyote in tribunale.</li>
-      <li><a href="https://partnershiponai.org/responsible-sourcing/" target="_blank" rel="noopener">Partnership on AI — Responsible Sourcing of Data Enrichment Services</a></li>
+      <li><a href="https://www.foxglove.org.uk/" target="_blank" rel="noopener">Foxglove</a> — ONG britannica che fa cause legali a fianco dei moderatori africani contro Meta, TikTok.</li>
+      <li><a href="https://data-workers.org/" target="_blank" rel="noopener">Data Workers' Inquiry</a> — Ricerca-azione con i ghost worker globali.</li>
+      <li>Mercy Mutemi (avvocata) — Porta avanti le cause kenyote.</li>
+      <li><a href="https://partnershiponai.org/responsible-sourcing/" target="_blank" rel="noopener">Partnership on AI — Responsible Sourcing</a></li>
       <li><strong>Ghost Work</strong>, Mary L. Gray &amp; Siddharth Suri — Il libro che ha definito la categoria.</li>
     </ul>
   </div>
 
   <h4>Letture sul tema</h4>
   <ul>
-    <li><strong>TIME</strong> (gennaio 2023) — <em>Inside Facebook's African Sweatshop</em> e <em>OpenAI Used Kenyan Workers on Less Than $2 Per Hour</em>.</li>
-    <li><strong>60 Minutes</strong> e <strong>DW</strong> — Documentari recenti sui lavoratori kenyoti.</li>
+    <li><strong>TIME</strong> (gennaio 2023) — <em>Inside Facebook's African Sweatshop</em>; <em>OpenAI Used Kenyan Workers on Less Than $2 Per Hour</em>.</li>
+    <li><strong>60 Minutes</strong> e <strong>DW</strong> — Documentari sui lavoratori kenyoti.</li>
     <li><a href="https://www.codastory.com/authoritarian-tech/the-hidden-workers-who-train-ai-from-kenyas-slums/" target="_blank" rel="noopener">Coda Story — "In Kenya's slums, they're doing our digital dirty work"</a></li>
   </ul>
 </section>
 
-<!-- ==================== SINDACALISMO ==================== -->
-<section id="sindacalismo">
-  <h2><span class="emoji">✊</span>Sindacalismo tech e organizing</h2>
-
-  <h3>Iniziative dei lavoratori contro Big Tech militare</h3>
-  <ul>
-    <li><a href="https://www.notechforapartheid.com/" target="_blank" rel="noopener">No Tech For Apartheid (NOTA)</a> — Campagna principale guidata da lavoratori di Google e Amazon contro il contratto Project Nimbus.</li>
-    <li><a href="https://en.wikipedia.org/wiki/No_Tech_for_Apartheid" target="_blank" rel="noopener">No Tech for Apartheid — Wikipedia</a></li>
-    <li><a href="https://bdsmovement.net/no-tech-apartheid" target="_blank" rel="noopener">No Tech for Apartheid — BDS Movement</a></li>
-    <li><a href="https://medium.com/@notechforapartheid" target="_blank" rel="noopener">No Tech For Apartheid — Medium</a></li>
-    <li><a href="https://noazureforapartheid.com/" target="_blank" rel="noopener">No Azure for Apartheid</a> — Lavoratori Microsoft contro contratti cloud/IA con Israele.</li>
-  </ul>
-
-  <h3>Sindacati e coalizioni</h3>
-  <ul>
-    <li><a href="https://techworkerscoalition.org/" target="_blank" rel="noopener">Tech Workers Coalition (TWC)</a> — Coalizione internazionale, volontaria e democratica di lavoratori tech.</li>
-    <li><a href="https://www.alphabetworkersunion.org/" target="_blank" rel="noopener">Alphabet Workers Union (AWU-CWA)</a> — Sindacato wall-to-wall di Google/Alphabet, affiliato a CWA.</li>
-    <li><a href="https://code-cwa.org/" target="_blank" rel="noopener">CODE-CWA</a> — Campaign to Organize Digital Employees: tech, videogiochi, digitale in USA e Canada.</li>
-    <li><a href="https://workerorganizing.org/" target="_blank" rel="noopener">Emergency Workplace Organizing Committee (EWOC)</a> — Iniziativa congiunta DSA + UE.</li>
-  </ul>
-</section>
-
-<!-- ==================== AI LITERACY ==================== -->
 <section id="literacy">
   <h2><span class="emoji">📚</span>AI literacy critica e ricerca indipendente</h2>
 
   <h3>Ricerca, advocacy e audit critico</h3>
   <ul>
-    <li><a href="https://www.dair-institute.org/" target="_blank" rel="noopener">DAIR — Distributed AI Research Institute</a> — Fondato da Timnit Gebru. Ricerca indipendente, comunitaria, esplicitamente "fuori" dall'influenza Big Tech.</li>
-    <li><a href="https://www.ajl.org/" target="_blank" rel="noopener">Algorithmic Justice League (AJL)</a> — Joy Buolamwini: ricerca, arte e advocacy contro bias algoritmici.</li>
+    <li><a href="https://www.dair-institute.org/" target="_blank" rel="noopener">DAIR — Distributed AI Research Institute</a> — Fondato da Timnit Gebru. Ricerca indipendente, comunitaria, fuori dall'influenza Big Tech.</li>
+    <li><a href="https://www.ajl.org/" target="_blank" rel="noopener">Algorithmic Justice League (AJL)</a> — Joy Buolamwini: ricerca, arte, advocacy contro bias algoritmici.</li>
     <li><a href="https://datasociety.net/" target="_blank" rel="noopener">Data &amp; Society</a> — Impatti sociali e politici di dati e IA.</li>
-    <li><a href="https://ainowinstitute.org/" target="_blank" rel="noopener">AI Now Institute</a> — Think tank critico su concentrazione di potere, lavoro, ambiente.</li>
+    <li><a href="https://ainowinstitute.org/" target="_blank" rel="noopener">AI Now Institute</a> — Concentrazione di potere, lavoro, ambiente nell'industria AI.</li>
     <li><a href="https://www.mozillafoundation.org/en/internet-health/trustworthy-artificial-intelligence/" target="_blank" rel="noopener">Mozilla Foundation — Trustworthy AI</a></li>
     <li><a href="https://huggingface.co/society-ethics" target="_blank" rel="noopener">Hugging Face — Society &amp; Ethics</a></li>
   </ul>
 
   <h3>Diritti digitali, sorveglianza, armi autonome</h3>
   <ul>
-    <li><a href="https://www.stopkillerrobots.org/" target="_blank" rel="noopener">Stop Killer Robots</a> — Coalizione di 250+ ONG per il bando delle armi autonome letali.</li>
+    <li><a href="https://www.stopkillerrobots.org/" target="_blank" rel="noopener">Stop Killer Robots</a> — 250+ ONG per il bando delle armi autonome letali.</li>
     <li><a href="https://www.eff.org/" target="_blank" rel="noopener">Electronic Frontier Foundation (EFF)</a></li>
     <li><a href="https://privacyinternational.org/learn/artificial-intelligence" target="_blank" rel="noopener">Privacy International — AI</a></li>
     <li><a href="https://www.accessnow.org/" target="_blank" rel="noopener">Access Now</a></li>
@@ -543,33 +645,32 @@
   <h3>Formazione e literacy</h3>
   <ul>
     <li><a href="https://bokcenter.harvard.edu/ai-literacy-and-ethics" target="_blank" rel="noopener">AI Literacy &amp; Ethics — Bok Center, Harvard</a></li>
-    <li><a href="https://teachingcommons.stanford.edu/teaching-guides/artificial-intelligence-teaching-guide/understanding-ai-literacy" target="_blank" rel="noopener">Understanding AI Literacy — Stanford Teaching Commons</a></li>
-    <li><a href="https://www.unesco.org/ethics-ai/en/" target="_blank" rel="noopener">UNESCO — Global AI Ethics &amp; Governance Observatory</a></li>
+    <li><a href="https://teachingcommons.stanford.edu/teaching-guides/artificial-intelligence-teaching-guide/understanding-ai-literacy" target="_blank" rel="noopener">Understanding AI Literacy — Stanford</a></li>
+    <li><a href="https://www.unesco.org/ethics-ai/en/" target="_blank" rel="noopener">UNESCO — Global AI Ethics Observatory</a></li>
     <li><a href="https://raise.mit.edu/" target="_blank" rel="noopener">MIT RAISE — AI and Ethics curriculum</a></li>
-    <li><a href="https://aiandyou.org/" target="_blank" rel="noopener">AIandYou</a> — Nonprofit USA per l'alfabetizzazione AI nelle comunità marginalizzate.</li>
-    <li><a href="https://commonvoice.mozilla.org/" target="_blank" rel="noopener">Mozilla Common Voice</a> — Dataset vocali multilingue open.</li>
+    <li><a href="https://aiandyou.org/" target="_blank" rel="noopener">AIandYou</a></li>
+    <li><a href="https://commonvoice.mozilla.org/" target="_blank" rel="noopener">Mozilla Common Voice</a></li>
   </ul>
 </section>
 
-<!-- ==================== LETTURE ==================== -->
 <section id="letture">
   <h2><span class="emoji">🎧</span>Letture e ascolti per orientarsi</h2>
 
   <h3>Libri per la AI literacy critica (italiano)</h3>
   <ul>
-    <li><strong>Luciano Floridi</strong>, <em>Etica dell'intelligenza artificiale</em> (Raffaello Cortina, 2022) — Il riferimento italiano per il vocabolario.</li>
-    <li><strong>Massimo Chiriatti</strong>, <em>Incoscienza artificiale</em> (Luiss University Press) — Smonta l'idea che l'IA "capisca" qualcosa.</li>
-    <li><strong>Stefano Quintarelli</strong> (a cura di), <em>Intelligenza artificiale</em> (Bollati Boringhieri) — Sei esperti, sei prospettive.</li>
-    <li><strong>Kate Crawford</strong>, <em>Né intelligente né artificiale. Il lato oscuro dell'IA</em> (Il Mulino, 2021) — Il libro più importante sulla materialità dell'IA.</li>
-    <li><strong>Cathy O'Neil</strong>, <em>Armi di distruzione matematica</em> — Algoritmi predittivi e disuguaglianze.</li>
+    <li><strong>Luciano Floridi</strong>, <em>Etica dell'intelligenza artificiale</em> (Raffaello Cortina, 2022).</li>
+    <li><strong>Massimo Chiriatti</strong>, <em>Incoscienza artificiale</em> (Luiss University Press).</li>
+    <li><strong>Stefano Quintarelli</strong> (a cura di), <em>Intelligenza artificiale</em> (Bollati Boringhieri).</li>
+    <li><strong>Kate Crawford</strong>, <em>Né intelligente né artificiale. Il lato oscuro dell'IA</em> (Il Mulino, 2021).</li>
+    <li><strong>Cathy O'Neil</strong>, <em>Armi di distruzione matematica</em>.</li>
     <li><strong>Shoshana Zuboff</strong>, <em>Il capitalismo della sorveglianza</em> (LUISS).</li>
     <li><strong>Daniela Tafani et al.</strong>, <em>Le macchine di dio</em> (Luiss University Press, 2022).</li>
   </ul>
 
   <h3>Podcast critici (inglese)</h3>
   <ul>
-    <li><a href="https://www.dair-institute.org/maiht3k/" target="_blank" rel="noopener">Mystery AI Hype Theater 3000</a> — Emily Bender + Alex Hanna (DAIR). Sgonfia l'hype settimanalmente.</li>
-    <li><a href="https://techwontsave.us/" target="_blank" rel="noopener">Tech Won't Save Us</a> — Paris Marx, critica politico-economica.</li>
+    <li><a href="https://www.dair-institute.org/maiht3k/" target="_blank" rel="noopener">Mystery AI Hype Theater 3000</a> — Emily Bender + Alex Hanna (DAIR).</li>
+    <li><a href="https://techwontsave.us/" target="_blank" rel="noopener">Tech Won't Save Us</a> — Paris Marx.</li>
     <li><a href="https://www.betteroffline.com/" target="_blank" rel="noopener">Better Offline</a> — Ed Zitron.</li>
   </ul>
 
@@ -577,13 +678,13 @@
   <ul>
     <li><a href="https://guerredirete.substack.com/" target="_blank" rel="noopener">Guerre di Rete</a> — Newsletter di Carola Frediani.</li>
     <li><a href="https://runtimeradio.it/dataknightmare/" target="_blank" rel="noopener">DataKnightmare</a> — Podcast di Walter Vannini.</li>
-    <li><a href="https://www.hermescenter.org/" target="_blank" rel="noopener">Hermes Center</a> — Trasparenza e diritti digitali.</li>
-    <li><a href="https://irpimedia.irpi.eu/" target="_blank" rel="noopener">IrpiMedia</a> — Giornalismo investigativo.</li>
+    <li><a href="https://www.hermescenter.org/" target="_blank" rel="noopener">Hermes Center</a></li>
+    <li><a href="https://irpimedia.irpi.eu/" target="_blank" rel="noopener">IrpiMedia</a></li>
   </ul>
 
   <h3>Riviste</h3>
   <ul>
-    <li><a href="https://logicmag.io/" target="_blank" rel="noopener">Logic(s) Magazine</a> — Tecnologia, lavoro, politica.</li>
+    <li><a href="https://logicmag.io/" target="_blank" rel="noopener">Logic(s) Magazine</a></li>
   </ul>
 </section>
 
@@ -593,7 +694,7 @@
   <div class="wrap">
     <p><strong>Resistenze AI</strong> — prototipo collaborativo. Materiali raccolti e organizzati da Foti e collaboratori, maggio 2026.</p>
     <p>Questo sito è statico, ospitato su GitHub Pages. La mappa è su <a href="https://umap.openstreetmap.fr/" target="_blank" rel="noopener">uMap</a> / OpenStreetMap. Nessun tracker, nessun cookie, nessun servizio Big Tech.</p>
-    <p>Contenuti rilasciati sotto <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.it" target="_blank" rel="noopener">Creative Commons BY-SA 4.0</a> — sei libero di copiarli, modificarli, ridistribuirli, citando la fonte.</p>
+    <p>Contenuti rilasciati sotto <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.it" target="_blank" rel="noopener">Creative Commons BY-SA 4.0</a>.</p>
   </div>
 </footer>
 
